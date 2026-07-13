@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜Saijo Web Studio</title>
+  <meta name="description" content="ホームページ制作代行・Claude Codeコーチングのご相談はこちらから。ホームページを作るか迷っている段階でも大丈夫です。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Saijo Web Studio</a>
+      <nav class="header__nav">
+        <a href="index.html#services">サービス</a>
+        <a href="index.html#pricing-make">料金</a>
+        <a href="index.html#faq">よくある質問</a>
+        <a href="contact.html" class="btn btn--sm">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ページ見出し -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero__label">お問い合わせ</p>
+      <h1 class="page-hero__title">まずはお気軽にご相談ください</h1>
+      <p class="page-hero__desc">
+        ホームページを作るかまだ決まっていない段階でも大丈夫です。制作をお願いしたい方も、自分で作れるようになりたい方も、現在の状況やご希望をお聞きしながら、最適な進め方を一緒に考えます。
+      </p>
+    </div>
+  </section>
+
+  <!-- お問い合わせフォーム -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-wrap">
+
+        <p class="form-privacy">送信いただいた内容は、お問い合わせ対応以外の目的では使用しません。</p>
+
+        <!--
+          Formspree設定について
+          下記 action の値「https://formspree.io/f/your-form-id」を、
+          ご自身のFormspreeフォームID発行後のURLに差し替えてください。
+          （例）https://formspree.io/f/abcd1234
+        -->
+        <form
+          id="contact-form"
+          class="form"
+          action="https://formspree.io/f/xvzeoypb"
+          method="POST"
+          novalidate
+        >
+
+          <div class="form__group">
+            <label class="form__label" for="name">
+              お名前
+              <span class="form__badge form__badge--required">必須</span>
+            </label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="例）西城 太郎" required>
+            <p class="form__error" id="error-name">お名前を入力してください。</p>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="email">
+              メールアドレス
+              <span class="form__badge form__badge--required">必須</span>
+            </label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="例）example@mail.com" required>
+            <p class="form__error" id="error-email">メールアドレスを正しく入力してください。</p>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="business">
+              事業内容
+              <span class="form__badge form__badge--optional">任意</span>
+            </label>
+            <input class="form__input" type="text" id="business" name="business" placeholder="例）整体院、美容室、個人サービス、副業 など">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="service">
+              希望サービス
+              <span class="form__badge form__badge--required">必須</span>
+            </label>
+            <select class="form__select" id="service" name="service" required>
+              <option value="" disabled selected>選択してください</option>
+              <option value="ホームページ制作代行">ホームページ制作代行</option>
+              <option value="Claude Code制作コーチング">Claude Code制作コーチング</option>
+              <option value="どちらがよいか相談したい">どちらがよいか相談したい</option>
+            </select>
+            <p class="form__error" id="error-service">希望サービスを選択してください。</p>
+          </div>
+
+          <div class="form__group">
+            <span class="form__label">
+              現在のホームページの有無
+              <span class="form__badge form__badge--optional">任意</span>
+            </span>
+            <div class="form__radio-group">
+              <label class="form__radio-option"><input type="radio" name="hasWebsite" value="あり"> あり</label>
+              <label class="form__radio-option"><input type="radio" name="hasWebsite" value="なし"> なし</label>
+              <label class="form__radio-option"><input type="radio" name="hasWebsite" value="制作中"> 制作中</label>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <span class="form__label">
+              Claude Codeの使用経験
+              <span class="form__badge form__badge--optional">任意</span>
+            </span>
+            <div class="form__radio-group">
+              <label class="form__radio-option"><input type="radio" name="claudeExperience" value="使ったことがある"> 使ったことがある</label>
+              <label class="form__radio-option"><input type="radio" name="claudeExperience" value="少しだけ使ったことがある"> 少しだけ使ったことがある</label>
+              <label class="form__radio-option"><input type="radio" name="claudeExperience" value="使ったことがない"> 使ったことがない</label>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="budget">
+              ご予算
+              <span class="form__badge form__badge--optional">任意</span>
+            </label>
+            <select class="form__select" id="budget" name="budget">
+              <option value="" selected>選択してください</option>
+              <option value="3万円未満">3万円未満</option>
+              <option value="3万円〜5万円">3万円〜5万円</option>
+              <option value="5万円〜10万円">5万円〜10万円</option>
+              <option value="10万円以上">10万円以上</option>
+              <option value="まだ決まっていない">まだ決まっていない</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="deadline">
+              希望納期
+              <span class="form__badge form__badge--optional">任意</span>
+            </label>
+            <select class="form__select" id="deadline" name="deadline">
+              <option value="" selected>選択してください</option>
+              <option value="できるだけ早く">できるだけ早く</option>
+              <option value="1ヶ月以内">1ヶ月以内</option>
+              <option value="2〜3ヶ月以内">2〜3ヶ月以内</option>
+              <option value="急ぎではない">急ぎではない</option>
+              <option value="まだ決まっていない">まだ決まっていない</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="message">
+              ご相談内容
+              <span class="form__badge form__badge--required">必須</span>
+            </label>
+            <textarea class="form__textarea" id="message" name="message" placeholder="作りたいホームページの内容、現在困っていること、相談したいことなどをご記入ください" required></textarea>
+            <p class="form__error" id="error-message">ご相談内容を入力してください。</p>
+          </div>
+
+          <div class="form__submit-wrap">
+            <button type="submit" class="btn btn--primary btn--lg form__submit">無料で相談する</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Saijo Web Studio</div>
+      <nav class="footer__nav">
+        <a href="index.html#services">サービス</a>
+        <a href="index.html#pricing-make">制作プラン</a>
+        <a href="index.html#pricing-coach">コーチング</a>
+        <a href="index.html#faq">よくある質問</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Saijo Web Studio</p>
+    </div>
+  </footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>

@@ -542,6 +542,127 @@ section { padding: 80px 0; }
   margin-top: -12px;
 }
 
+/* ===== ページ見出し（下層ページ用） ===== */
+.page-hero {
+  background: linear-gradient(135deg, var(--color-bg) 0%, #e8f0ea 100%);
+  padding: 72px 0 56px;
+  text-align: center;
+}
+.page-hero__title {
+  font-size: clamp(24px, 4.5vw, 36px);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.page-hero__desc {
+  font-size: 15px;
+  color: var(--color-text-light);
+  line-height: 2;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ===== お問い合わせフォーム ===== */
+.form-section { background: var(--color-white); }
+.form-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.form-privacy {
+  background: rgba(93,138,102,0.08);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.form__group { margin-bottom: 32px; }
+.form__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.form__badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.form__badge--required { background: rgba(193,74,74,0.12); color: #c14a4a; }
+.form__badge--optional { background: rgba(93,138,102,0.1); color: var(--color-primary); }
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  font-family: var(--font);
+  font-size: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(93,138,102,0.3);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(93,138,102,0.15);
+}
+.form__textarea { min-height: 160px; resize: vertical; line-height: 1.8; font-family: var(--font); }
+
+.form__radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.form__radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.form__radio-option input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.form__error {
+  font-size: 13px;
+  color: #c14a4a;
+  margin-top: 8px;
+  display: none;
+}
+.form__error--show { display: block; }
+.form__input--error,
+.form__select--error,
+.form__textarea--error {
+  border-color: #c14a4a;
+}
+
+.form__submit-wrap {
+  text-align: center;
+  margin-top: 48px;
+}
+.form__submit {
+  width: 100%;
+  max-width: 360px;
+  font-size: 18px;
+}
+@media (min-width: 480px) {
+  .form__submit { width: auto; }
+}
+
 /* ===== フッター ===== */
 .footer {
   background: #2a3d2e;
